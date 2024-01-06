@@ -4,4 +4,5 @@ Lokal WebApp dengan python untuk klasifikasi Pollutant Standards Index dengan da
 ![image](https://github.com/AdityaMiko/Pollutant-Index-Classification/assets/54790529/10a90f45-bb05-4a44-a651-0b51e43eacc9)
 
 Cara Menjalankan WebApp :
+- Clone repository "git clone https://github.com/AdityaMiko/Pollutant-Index-Classification.git"
 - Ketik "python -m flask run" pada terminal
