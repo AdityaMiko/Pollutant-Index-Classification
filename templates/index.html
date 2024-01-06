@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pollutant Index Classification</title>
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container text-center align-item-center">
+    <h1>Pollutant Index Classification</h1>
+    <br>
+    <br>
+    <form class="form-input" action="{{ url_for('predict')}}" method="post">
+      <div class="row align-items-start">
+        <div class="col">
+          <div>
+            <label for="PM2" class="form-label">Particulate Matter 2.5 / PM2.5</label>
+            <input type="text" name="PM2.5" class="form-control" id="PM2" placeholder="PM2.5" required="required">
+          </div>
+          <br>
+          <div>
+            <label for="SO2" class="form-label">Sulfur Dioxide / SO2</label>
+            <input type="text" name="SO2" class="form-control" id="SO2" placeholder="SO2" required="required">
+          </div>
+          <br>
+          <div>
+            <label for="O3" class="form-label">Ozone / O3</label>
+            <input type="text" name="O3" class="form-control" id="O3" placeholder="O3" required="required">
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <label for="PM10" class="form-label">Particulate Matter 10 / PM10</label>
+            <input type="text" name="PM10" class="form-control" id="PM10" placeholder="PM10" required="required">
+          </div>
+          <br>
+          <div>
+            <label for="CO" class="form-label">Carbon Monoxide / CO</label>
+            <input type="text" name="CO" class="form-control" id="CO" placeholder="CO" required="required">
+          </div>
+          <br>
+          <div>
+            <label for="NO2" class="form-label">Nitrogen Dioxide / NO2</label>
+            <input type="text" name="NO2" class="form-control" id="NO2" placeholder="NO2" required="required">
+          </div>
+        </div> <!-- Col -->
+      </div> <!-- Row -->
+      <br>
+      <button class="btn btn-primary rounded-0 w-50">Predict</button>
+    </form>
+    <br>
+    <br>
+    <div>
+      <input type="text" class="form-control form-result text-center rounded-0" id="Result" value="{{prediction_text}}" disabled
+        readonly>
+    </div>
+  </div>
+</body>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+</html>
